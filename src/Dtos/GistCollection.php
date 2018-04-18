@@ -20,7 +20,7 @@ class GistCollection extends ArrayObject
 
         /** @var Gist $gist */
         foreach($this as $gist) {
-            $files = $files  + $gist->getFiles();
+            $files = array_merge($files,$gist->getFiles());
         }
 
         return $files;
