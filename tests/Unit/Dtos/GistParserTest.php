@@ -1,7 +1,9 @@
 <?php
 
-namespace App;
+namespace Tests\Unit;
 
+use App\Dtos\GistCollection;
+use App\Dtos\GistParser;
 use PHPUnit\Framework\TestCase;
 
 class GistParserTest extends TestCase

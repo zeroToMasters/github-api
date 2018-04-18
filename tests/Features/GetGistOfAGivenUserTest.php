@@ -2,7 +2,6 @@
 
 namespace Tests\Features;
 
-use App\GistCollection;
 use App\GistService;
 use PHPUnit\Framework\TestCase;
 

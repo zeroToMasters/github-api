@@ -1,7 +1,8 @@
 <?php
 
-namespace App;
+namespace Tests\Unit;
 
+use App\Dtos\Gist;
 use PHPUnit\Framework\TestCase;
 
 class GistTest extends TestCase

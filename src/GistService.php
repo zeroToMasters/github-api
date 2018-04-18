@@ -2,6 +2,7 @@
 
 namespace App;
 
+use App\Dtos\GistParser;
 use GuzzleHttp\Client;
 
 class GistService

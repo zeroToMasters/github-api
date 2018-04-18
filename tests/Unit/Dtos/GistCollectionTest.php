@@ -2,8 +2,8 @@
 
 namespace Tests\Unit;
 
-use App\Gist;
-use App\GistCollection;
+use App\Dtos\Gist;
+use App\Dtos\GistCollection;
 use PHPUnit\Framework\TestCase;
 
 class GistCollectionTest extends TestCase
