@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a0291a29-3174-4273-83ef-6645086ffac8" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Dtos/Gist.php" afterPath="$PROJECT_DIR$/src/Dtos/Gist.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Dtos/GistCollection.php" afterPath="$PROJECT_DIR$/src/Dtos/GistCollection.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/Unit/Dtos/GistCollectionTest.php" afterPath="$PROJECT_DIR$/tests/Unit/Dtos/GistCollectionTest.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/Unit/Dtos/GistParserTest.php" afterPath="$PROJECT_DIR$/tests/Unit/Dtos/GistParserTest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/Unit/Dtos/GistTest.php" afterPath="$PROJECT_DIR$/tests/Unit/Dtos/GistTest.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -41,8 +36,8 @@
       <file leaf-file-name="GistParserTest.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tests/Unit/Dtos/GistParserTest.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-25">
-              <caret line="10" column="4" lean-forward="false" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
+            <state relative-caret-position="488">
+              <caret line="67" column="43" lean-forward="false" selection-start-line="67" selection-start-column="43" selection-end-line="67" selection-end-column="43" />
               <folding>
                 <element signature="e#30#58#0#PHP" expanded="true" />
               </folding>
@@ -266,12 +261,12 @@
       <updated>1524047715678</updated>
       <workItem from="1524047716860" duration="2925000" />
       <workItem from="1524050812452" duration="3144000" />
-      <workItem from="1524058365246" duration="908000" />
+      <workItem from="1524058365246" duration="1103000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6977000" />
+    <option name="totallyTimeSpent" value="7172000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="849" extended-state="6" />
@@ -530,8 +525,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/Unit/Dtos/GistParserTest.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-25">
-          <caret line="10" column="4" lean-forward="false" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
+        <state relative-caret-position="488">
+          <caret line="67" column="43" lean-forward="false" selection-start-line="67" selection-start-column="43" selection-end-line="67" selection-end-column="43" />
           <folding>
             <element signature="e#30#58#0#PHP" expanded="true" />
           </folding>

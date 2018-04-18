@@ -32,6 +32,43 @@ GIST;
     }
 
     /** @test */
+    public function it_parses_a_multiple_into_a_gist_collection()
+    {
+        $url01 = "Some url 01";
+        $url02 = "Some url 02";
+        $gistJson = <<<GIST
+[
+  {
+    "url": "{$url01}",   
+    "files": {
+      "Test": {
+        "raw_url": "https://gist.githubusercontent.com/estringana/0bb8435a0f595e14a6be2ef1f20ae210/raw/b78e300b23a8d2be3aa7d7380e8147d3364a3681/Test"
+      }
+    }   
+  },
+  {
+    "url": "{$url02}",   
+    "files": {
+      "Test": {
+        "raw_url": "https://gist.githubusercontent.com/estringana/0bb8435a0f595e14a6be2ef1f20ae210/raw/b78e300b23a8d2be3aa7d7380e8147d3364a3681/Test"
+      }
+    }   
+  }
+]
+GIST;
+        ;
+        $parser = new GistParser();
+        $gistCollection = $parser->parse($gistJson);
+
+        $gist01 = $gistCollection[0];
+        $gist02 = $gistCollection[1];
+
+        $this->assertCount(2, $gistCollection);
+        $this->assertEquals($url01, $gist01->getUrl());
+        $this->assertEquals($url02, $gist02->getUrl());
+    }
+
+    /** @test */
     public function it_parses_the_url()
     {
         $url = "Some url";
