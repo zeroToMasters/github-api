@@ -2,21 +2,20 @@
 
 namespace Tests\Features;
 
-use PHPUnit\Framework\TestCase;
+use App\GistCollection;
 use App\GistService;
-use App\Gistcollection;
+use PHPUnit\Framework\TestCase;
 
 class GetGistOfAGivenUserTest extends TestCase
 {
-	public function test_a_gist_collection_is_return_given_a_given_user()
-	{
-		$username = 'estringana';
+    public function test_a_gist_collection_is_return_given_a_given_user()
+    {
+        $username = 'estringana';
 
-		$gistService = new GistService($username);
+        $gistService = new GistService($username);
 
-		$collection = $gistService->getAll();
+        $collection = $gistService->getAll();
 
-		$this->assertInstanceOf(Gistcollection::class, $collection);
-		$this->assertCount(1, $collection);
-	}
+        $this->assertCount(1, $collection);
+    }
 }
