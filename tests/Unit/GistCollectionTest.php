@@ -24,4 +24,18 @@ class GistCollectionTest extends TestCase
     {
         $this->assertCount(0, new GistCollection());
     }
+    
+    /** @test */
+    public function it_returns_the_given_gist()
+    {
+        $urlGiven = 'some url';
+        $collection = new GistCollection(...[
+            new Gist($urlGiven),
+        ]);
+
+        /** @var Gist $gist */
+        $gist = $collection[0];
+
+        $this->assertEquals($urlGiven, $gist->getUrl());
+    }
 }
