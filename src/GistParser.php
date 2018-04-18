@@ -20,6 +20,6 @@ class GistParser
             $gists[] = $gist;
         }
 
-        return new GistCollection($gists);
+        return new GistCollection(...$gists);
     }
 }
