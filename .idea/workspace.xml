@@ -2,15 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a0291a29-3174-4273-83ef-6645086ffac8" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Gist.php" afterPath="$PROJECT_DIR$/src/Dtos/Gist.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/GistCollection.php" afterPath="$PROJECT_DIR$/src/Dtos/GistCollection.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/GistParser.php" afterPath="$PROJECT_DIR$/src/Dtos/GistParser.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tests/Unit/GistCollectionTest.php" afterPath="$PROJECT_DIR$/tests/Unit/Dtos/GistCollectionTest.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tests/Unit/GistParserTest.php" afterPath="$PROJECT_DIR$/tests/Unit/Dtos/GistParserTest.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tests/Unit/GistTest.php" afterPath="$PROJECT_DIR$/tests/Unit/Dtos/GistTest.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GistService.php" afterPath="$PROJECT_DIR$/src/GistService.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/Features/GetGistOfAGivenUserTest.php" afterPath="$PROJECT_DIR$/tests/Features/GetGistOfAGivenUserTest.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -24,8 +17,8 @@
       <file leaf-file-name="GistParser.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Dtos/GistParser.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="42">
-              <caret line="2" column="18" lean-forward="false" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
+            <state relative-caret-position="483">
+              <caret line="23" column="5" lean-forward="false" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -41,10 +34,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GistParserTest.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="GistParserTest.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tests/Unit/Dtos/GistParserTest.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="460">
+            <state relative-caret-position="-7">
               <caret line="29" column="37" lean-forward="false" selection-start-line="29" selection-start-column="37" selection-end-line="29" selection-end-column="37" />
               <folding>
                 <element signature="e#30#58#0#PHP" expanded="true" />
@@ -75,11 +68,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GistService.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="GistService.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/GistService.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="20" column="28" lean-forward="true" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
+            <state relative-caret-position="77">
+              <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
               <folding>
                 <element signature="e#23#47#0#PHP" expanded="true" />
               </folding>
@@ -130,12 +123,12 @@
         <option value="$PROJECT_DIR$/src/GistParser.php" />
         <option value="$PROJECT_DIR$/src/Dtos/Gist.php" />
         <option value="$PROJECT_DIR$/src/Dtos/GistCollection.php" />
-        <option value="$PROJECT_DIR$/src/Dtos/GistParser.php" />
         <option value="$PROJECT_DIR$/tests/Unit/GistCollectionTest.php" />
         <option value="$PROJECT_DIR$/tests/Unit/GistTest.php" />
         <option value="$PROJECT_DIR$/tests/Unit/GistParserTest.php" />
         <option value="$PROJECT_DIR$/tests/Features/GetGistOfAGivenUserTest.php" />
         <option value="$PROJECT_DIR$/src/GistService.php" />
+        <option value="$PROJECT_DIR$/src/Dtos/GistParser.php" />
       </list>
     </option>
   </component>
@@ -265,17 +258,18 @@
       <option name="presentableId" value="Default" />
       <updated>1524047715678</updated>
       <workItem from="1524047716860" duration="2925000" />
-      <workItem from="1524050812452" duration="2220000" />
+      <workItem from="1524050812452" duration="2485000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5145000" />
+    <option name="totallyTimeSpent" value="5410000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="849" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2532189" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2532189" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -388,22 +382,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Dtos/GistCollection.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="2" column="18" lean-forward="false" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Dtos/GistParser.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="2" column="18" lean-forward="false" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Dtos/Gist.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="84">
@@ -412,32 +390,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/Unit/Dtos/GistTest.php">
+    <entry file="file://$PROJECT_DIR$/src/Dtos/GistParser.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="14" column="22" lean-forward="false" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
-          <folding>
-            <element signature="e#30#48#0#PHP" expanded="true" />
-          </folding>
+        <state relative-caret-position="483">
+          <caret line="23" column="5" lean-forward="false" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/Unit/Dtos/GistCollectionTest.php">
+    <entry file="file://$PROJECT_DIR$/src/Dtos/GistCollection.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="13" column="29" lean-forward="true" selection-start-line="13" selection-start-column="29" selection-end-line="13" selection-end-column="29" />
-          <folding>
-            <element signature="e#30#48#0#PHP" expanded="true" />
-          </folding>
+        <state relative-caret-position="42">
+          <caret line="2" column="18" lean-forward="false" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/Unit/Dtos/GistParserTest.php">
+    <entry file="file://$PROJECT_DIR$/src/GistService.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="29" column="37" lean-forward="false" selection-start-line="29" selection-start-column="37" selection-end-line="29" selection-end-column="37" />
+        <state relative-caret-position="77">
+          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
           <folding>
-            <element signature="e#30#58#0#PHP" expanded="true" />
+            <element signature="e#23#47#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -452,12 +426,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/GistService.php">
+    <entry file="file://$PROJECT_DIR$/tests/Unit/Dtos/GistCollectionTest.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="20" column="28" lean-forward="true" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
+        <state relative-caret-position="273">
+          <caret line="13" column="29" lean-forward="true" selection-start-line="13" selection-start-column="29" selection-end-line="13" selection-end-column="29" />
           <folding>
-            <element signature="e#23#47#0#PHP" expanded="true" />
+            <element signature="e#30#48#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/Unit/Dtos/GistTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="14" column="22" lean-forward="false" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
+          <folding>
+            <element signature="e#30#48#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/Unit/Dtos/GistParserTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-7">
+          <caret line="29" column="37" lean-forward="false" selection-start-line="29" selection-start-column="37" selection-end-line="29" selection-end-column="37" />
+          <folding>
+            <element signature="e#30#58#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
