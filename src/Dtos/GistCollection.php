@@ -13,4 +13,16 @@ class GistCollection extends ArrayObject
             $this->append($gist);
         }
     }
+
+    public function getFiles(): array
+    {
+        $files = [];
+
+        /** @var Gist $gist */
+        foreach($this as $gist) {
+            $files = $files  + $gist->getFiles();
+        }
+
+        return $files;
+    }
 }

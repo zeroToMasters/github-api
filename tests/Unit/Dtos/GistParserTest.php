@@ -54,4 +54,33 @@ GIST;
         $gist = $gistCollection[0];
         $this->assertEquals($url, $gist->getUrl());
     }
+
+    /** @test */
+    public function it_parses_the_files_given()
+    {
+        $fileUrl01 = "Some file Url 01";
+        $fileUrl02 = "Some file Url 02";
+        $gistJson = <<<GIST
+[
+  {
+    "url": "Some url",   
+    "files": {
+      "File01": {
+        "raw_url": "{$fileUrl01}"
+      },
+      "File02": {
+        "raw_url": "{$fileUrl02}"
+      }
+    }   
+  }
+]
+GIST;
+
+        $parser = new GistParser();
+        $gistCollection= $parser->parse($gistJson);
+
+        $files = $gistCollection->getFiles();
+
+        $this->assertEquals([$fileUrl01, $fileUrl02], $files);
+    }
 }

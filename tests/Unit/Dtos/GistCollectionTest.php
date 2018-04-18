@@ -18,13 +18,13 @@ class GistCollectionTest extends TestCase
 
         $this->assertCount(2, $collection);
     }
-    
+
     /** @test */
     public function it_returns_zero_if_no_gists_given()
     {
         $this->assertCount(0, new GistCollection());
     }
-    
+
     /** @test */
     public function it_returns_the_given_gist()
     {
@@ -40,5 +40,34 @@ class GistCollectionTest extends TestCase
 
         $this->assertEquals($urlGiven, $firstGist->getUrl());
         $this->assertEquals($anotherUrl, $secondGist->getUrl());
+    }
+
+    /** @test */
+    public function it_gets_a_list_of_all_files_on_all_gists()
+    {
+        $file01 = 'file01OnGist01';
+        $file02 = 'file02OnGist01';
+        $file03 = 'file01OnGist02';
+
+        $gist01 = new Gist('some url');
+        $gist01->addFile($file01);
+        $gist01->addFile($file02);
+
+        $gist02 = new Gist('some url');
+        $gist02->addFile($file03);
+
+        $collection = new GistCollection(...[
+            $gist01,
+            $gist02,
+        ]);
+
+        $this->assertEquals(
+            [
+                $file01,
+                $file02,
+                $file03,
+            ],
+            $collection->getFiles()
+        );
     }
 }
