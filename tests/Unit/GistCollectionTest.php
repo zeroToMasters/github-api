@@ -29,13 +29,16 @@ class GistCollectionTest extends TestCase
     public function it_returns_the_given_gist()
     {
         $urlGiven = 'some url';
+        $anotherUrl = 'some other url';
         $collection = new GistCollection(...[
             new Gist($urlGiven),
+            new Gist($anotherUrl),
         ]);
 
-        /** @var Gist $gist */
-        $gist = $collection[0];
+        $firstGist = $collection[0];
+        $secondGist = $collection[1];
 
-        $this->assertEquals($urlGiven, $gist->getUrl());
+        $this->assertEquals($urlGiven, $firstGist->getUrl());
+        $this->assertEquals($anotherUrl, $secondGist->getUrl());
     }
 }
