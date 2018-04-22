@@ -6,6 +6,7 @@
          beStrictAboutCoversAnnotation="true"
          beStrictAboutOutputDuringTests="true"
          beStrictAboutTodoAnnotatedTests="true"
+         colors="true"
          verbose="true">
     <testsuite name="default">
         <directory suffix="Test.php">tests</directory>

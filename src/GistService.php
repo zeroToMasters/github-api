@@ -3,17 +3,29 @@
 namespace App;
 
 use GuzzleHttp\Client;
+use App\Dtos\GistCollection;
 
 class GistService
 {
-	public function getAll(): GistCollection
-	{
-		$url = 'https://api.github.com/users/estringana/gists';
-		$httpClient = new Client();
-		$response = $httpClient->get($url);
+    private $username;
 
-		$responseDecoded = json_decode($response->getBody());	
+    public function __construct(string $username)
+    {
+        $this->username = $username;
+    }
 
-		return new GistCollection($responseDecoded);
-	}
+    private function getEndpoint(): string
+    {
+        return sprintf('https://api.github.com/users/%s/gists', $this->username);
+    }
+
+    public function getAll(): GistCollection
+    {
+        $httpClient = new Client();
+        $response = $httpClient->get($this->getEndpoint());
+
+        $responseDecoded = json_decode($response->getBody());
+
+        return new GistCollection($responseDecoded);
+    }
 }
