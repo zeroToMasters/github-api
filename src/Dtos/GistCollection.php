@@ -6,5 +6,5 @@ use ArrayObject;
 
 class GistCollection extends ArrayObject
 {
-	
+
 }

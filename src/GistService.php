@@ -4,6 +4,8 @@ namespace App;
 
 use GuzzleHttp\Client;
 use App\Dtos\GistCollection;
+use App\Exceptions\UserNotFoundException;
+use GuzzleHttp\Exception\ClientException;
 
 class GistService
 {
@@ -22,7 +24,12 @@ class GistService
     public function getAll(): GistCollection
     {
         $httpClient = new Client();
-        $response = $httpClient->get($this->getEndpoint());
+
+        try {
+            $response = $httpClient->get($this->getEndpoint());
+        } catch (ClientException $exception) {
+            throw new UserNotFoundException();
+        }
 
         $responseDecoded = json_decode($response->getBody());
 
