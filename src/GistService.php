@@ -10,9 +10,11 @@ use GuzzleHttp\Exception\ClientException;
 class GistService
 {
     private $username;
+    private $httpClient;
 
-    public function __construct(string $username)
+    public function __construct(string $username, Client $httpClient)
     {
+        $this->httpClient = $httpClient;
         $this->username = $username;
     }
 
@@ -23,10 +25,8 @@ class GistService
 
     public function getAll(): GistCollection
     {
-        $httpClient = new Client();
-
         try {
-            $response = $httpClient->get($this->getEndpoint());
+            $response = $this->httpClient->get($this->getEndpoint());
         } catch (ClientException $exception) {
             throw new UserNotFoundException();
         }
