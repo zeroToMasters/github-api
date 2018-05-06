@@ -5,6 +5,7 @@ namespace Tests\Features;
 use PHPUnit\Framework\TestCase;
 use App\GistService;
 use App\Dtos\GistCollection;
+use App\Dtos\Gist;
 use App\Exceptions\UserNotFoundException;
 use GuzzleHttp\Psr7\Response;
 
@@ -175,5 +176,23 @@ RESPONSE;
         }
 
         $this->assertTrue($isExceptionThrown);
+    }
+
+    public function test_we_get_the_urls_of_the_gists_retrieved()
+    {
+        $url01 = 'url01';
+        $url02 = 'url02';
+        $gistResponse = sprintf('[{"url": "%s"},{"url": "%s"}]', $url01, $url02);
+        $client = getClientWithResponses([new Response(200, [], $gistResponse)]);
+
+        $gistService = new GistService('existingUser', $client);
+        $collection = $gistService->getAll();
+        $first = $collection[0];
+        $second = $collection[1];
+
+        $this->assertInstanceOf(Gist::class, $first);
+        $this->assertEquals($url01, $first->getUrl());
+        $this->assertInstanceOf(Gist::class, $second);
+        $this->assertEquals($url02, $second->getUrl());
     }
 }
