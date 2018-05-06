@@ -6,9 +6,6 @@ use PHPUnit\Framework\TestCase;
 use App\GistService;
 use App\Dtos\GistCollection;
 use App\Exceptions\UserNotFoundException;
-use GuzzleHttp\Client;
-use GuzzleHttp\Handler\MockHandler;
-use GuzzleHttp\HandlerStack;
 use GuzzleHttp\Psr7\Response;
 
 class WeCanGetAllGistsFromAGivenUserTest extends TestCase
@@ -155,12 +152,7 @@ class WeCanGetAllGistsFromAGivenUserTest extends TestCase
 ]
 RESPONSE;
         $existingUsername = 'estringana';
-        $mock = new MockHandler([
-            new Response(200, [], $gistResponse),
-        ]);
-
-        $handler = HandlerStack::create($mock);
-        $client = new Client(['handler' => $handler]);
+        $client = getClientWithResponses([new Response(200, [], $gistResponse)]);
 
         $gistService = new GistService($existingUsername, $client);
         $collection = $gistService->getAll();
@@ -171,12 +163,7 @@ RESPONSE;
 
     public function test_exception_is_thrown_when_username_not_found()
     {
-        $mock = new MockHandler([
-            new Response(404, []),
-        ]);
-
-        $handler = HandlerStack::create($mock);
-        $client = new Client(['handler' => $handler]);
+        $client = getClientWithResponses([new Response(404, [])]);
         $nonExistingUsername = 'not-existing-username';
         $isExceptionThrown = false;
 
