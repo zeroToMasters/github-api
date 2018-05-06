@@ -31,8 +31,8 @@ class GistService
             throw new UserNotFoundException();
         }
 
-        $responseDecoded = json_decode($response->getBody());
+        $gistParser = new GistParser();
 
-        return new GistCollection($responseDecoded);
+        return $gistParser->parse($response->getBody());
     }
 }

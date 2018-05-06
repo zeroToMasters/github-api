@@ -6,10 +6,10 @@ use ArrayObject;
 
 class GistCollection extends ArrayObject
 {
-	public function __construct(array $gistsArray)
+	public function __construct(Gist ...$gists)
 	{
-		foreach($gistsArray as $gistArray) {
-			$this->append(new Gist($gistArray->url));
+		foreach($gists as $gist) {
+			$this->append($gist);
 		}
 	}
 }
