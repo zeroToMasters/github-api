@@ -13,7 +13,12 @@ class GistParser
 
         $gists = [];
         foreach($responseDecoded as $gistArray) {
-            $gists[] = new Gist($gistArray->url);
+        	$files = [];
+        	$filesArray = $gistArray->files ?? [];
+        	foreach ($filesArray as $file) {
+        		$files[] = $file->filename;
+        	}
+            $gists[] = new Gist($gistArray->url, $files);
         }
 
         return new GistCollection(...$gists);
