@@ -18,7 +18,7 @@ class GistCollection extends ArrayObject
 		$filesCollection = new FilesCollection();
 
 		foreach($this as $gist) {
-			$filesCollection->add($gist->getFiles());
+			$filesCollection->merge($gist->getFiles());
 		}
 
 		return $filesCollection;

@@ -6,10 +6,22 @@ use ArrayObject;
 
 class FilesCollection extends ArrayObject
 {
-	public function add(array $files)
+	public function __construct(File ...$files)
+	{
+		foreach($files as $file) {
+			$this->add($file);
+		}
+	}
+
+	public function merge(FilesCollection $files)
 	{
 		foreach ($files as $file) {
-			$this->append($file);
+			$this->add($file);
 		}
+	}
+
+	private function add(File $file)
+	{
+		$this->append($file);
 	}
 }

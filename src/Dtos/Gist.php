@@ -7,10 +7,10 @@ class Gist
 	private $url;
 	private $files;
 
-	public function __construct(string $url, array $files)
+	public function __construct(string $url, FilesCollection $filesCollection)
 	{
 		$this->url = $url;
-		$this->files = $files;
+		$this->files = $filesCollection;
 	}
 
 	public function getUrl(): string
@@ -18,7 +18,7 @@ class Gist
 		return $this->url;
 	}
 
-	public function getFiles(): array
+	public function getFiles(): FilesCollection
 	{
 		return $this->files;
 	}
