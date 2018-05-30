@@ -5,6 +5,7 @@ namespace Tests\Features;
 use PHPUnit\Framework\TestCase;
 use App\GistService;
 use App\Dtos\FilesCollection;
+use App\Dtos\File;
 use GuzzleHttp\Psr7\Response;
 
 class WeCanGetAllFilesFromAGivenUserTest extends TestCase
@@ -42,5 +43,33 @@ RESPONSE;
 
         $this->assertInstanceOf(FilesCollection::class, $filesCollection);
         $this->assertCount(3, $filesCollection);
+    }
+
+    public function test_we_get_the_filenames_of_the_files_retrieved()
+    {
+        $filename = 'fileOnGist.php';
+        $gistTemplate = <<<RESPONSE
+[
+  {
+    "url": "Some url",    
+    "files": {
+      "%s": {
+        "filename": "%s"
+      }
+    }    
+  }
+]
+RESPONSE;
+        $gistResponse = sprintf($gistTemplate, $filename, $filename);
+        $client = getClientWithResponses([new Response(200, [], $gistResponse)]);
+
+        $gistService = new GistService('existingUser', $client);
+        $gistCollection = $gistService->getAll();
+        $filesCollection = $gistCollection->getFiles();
+
+        $firstFile = $filesCollection[0];
+
+        $this->assertInstanceOf(File::class, $firstFile);
+        $this->assertEquals($filename, $firstFile->getFilename());
     }
 }
